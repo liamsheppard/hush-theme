@@ -1,0 +1,25 @@
+diff --git a/src/old.js b/src/new.js
+index abc1234..def5678 100644
+--- a/src/old.js
++++ b/src/new.js
+@@ -1,8 +1,10 @@
+ // Diff theme sampler — exercises diff.* scopes
+ const greeting = "hello";
+
+-function oldFunction(name) {
+-  return "Hi, " + name;
++function newFunction(name) {
++  return `Hi, ${name}!`;
+ }
+
+-console.log(oldFunction("world"));
++console.log(newFunction("world"));
++
++// New comment line
+@@ -20,5 +22,3 @@ class Example {
+   method() {
+     return this.value;
+-    // old trailing comment
+   }
+-}
++}

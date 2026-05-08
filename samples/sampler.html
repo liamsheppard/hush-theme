@@ -1,0 +1,138 @@
+<!doctype html>
+<!--
+  HTML theme sampler — exercises common HTML scopes.
+  Open in the Extension Dev Host with Inspect Tokens.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sampler &mdash; HTML</title>
+
+    <!-- Inline style block (CSS embedded) -->
+    <style>
+      body {
+        font-family: sans-serif;
+        color: #333;
+      }
+      .highlight {
+        background: #ffeecc;
+      }
+      #main > p:first-child::before {
+        content: "→ ";
+      }
+    </style>
+
+    <!-- Inline script block (JS embedded) -->
+    <script type="text/javascript">
+      const greet = (name) => `Hello, ${name}!`;
+      console.log(greet("world"));
+    </script>
+  </head>
+
+  <body class="page" data-theme="light">
+    <header id="top" role="banner">
+      <h1 class="title">HTML &amp; entities &lt;test&gt;</h1>
+    </header>
+
+    <main id="main">
+      <!-- Block-level elements -->
+      <section>
+        <h2>Lists</h2>
+        <ul>
+          <li>First item</li>
+          <li>
+            Second item with
+            <a href="https://example.com" target="_blank" rel="noopener"
+              >a link</a
+            >
+          </li>
+          <li><strong>Bold</strong> and <em>italic</em></li>
+        </ul>
+
+        <ol start="3">
+          <li>Third</li>
+          <li>Fourth</li>
+        </ol>
+      </section>
+
+      <!-- Form elements -->
+      <section>
+        <h2>Form</h2>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Jane Doe"
+            required
+            maxlength="100"
+          />
+
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            min="0"
+            max="120"
+            value="42"
+          />
+
+          <label for="bio">Bio:</label>
+          <textarea id="bio" rows="5" cols="40" disabled></textarea>
+
+          <select name="color">
+            <option value="" disabled selected>Pick one</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+          </select>
+
+          <input type="checkbox" id="agree" checked />
+          <label for="agree">I agree</label>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+      <!-- Self-closing / void elements -->
+      <hr />
+      <img src="image.png" alt="An image" width="200" height="100" />
+      <br />
+
+      <!-- Table -->
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ada</td>
+            <td>99</td>
+          </tr>
+          <tr>
+            <td>Grace</td>
+            <td>100</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Special characters / entities -->
+      <p>Entities: &amp; &lt; &gt; &quot; &copy; &nbsp; &#x2603;</p>
+
+      <!-- Code & preformatted -->
+      <pre><code class="language-js">function add(a, b) { return a + b; }</code></pre>
+
+      <!-- Custom element / data attributes -->
+      <my-widget data-id="42" aria-label="Custom widget"></my-widget>
+    </main>
+
+    <footer>
+      <small>&copy; 2026</small>
+    </footer>
+  </body>
+</html>

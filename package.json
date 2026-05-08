@@ -1,0 +1,30 @@
+{
+  "name": "hush-color-theme",
+  "displayName": "hush-color-theme",
+  "description": "Minimal color theme with only a few colors",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.116.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.js"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Hush Light",
+        "uiTheme": "vs",
+        "path": "./themes/Hush-light-color-theme.json"
+      },
+      {
+        "label": "Hush Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Hush-dark-color-theme.json"
+      }
+    ]
+  }
+}

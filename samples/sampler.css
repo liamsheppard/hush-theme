@@ -1,0 +1,211 @@
+/* ========================================================
+   CSS theme sampler — exercises common CSS scopes.
+   ======================================================== */
+
+/* === @-rules === */
+@charset "UTF-8";
+@import url("./other.css");
+@namespace svg url(http://www.w3.org/2000/svg);
+
+@font-face {
+  font-family: "MyFont";
+  src: url("font.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) and (prefers-color-scheme: dark) {
+  body {
+    background: #111;
+    color: #eee;
+  }
+}
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+  }
+}
+
+/* === Variables (custom properties) === */
+:root {
+  --primary: #ff00ff;
+  --spacing-md: 1rem;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* === Selectors === */
+
+/* Element */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Class, id, attribute */
+.button {
+  padding: 8px 12px;
+}
+#header {
+  position: sticky;
+  top: 0;
+}
+[type="text"] {
+  border: 1px solid #ccc;
+}
+[data-state="active"] {
+  font-weight: bold;
+}
+a[href^="https://"] {
+  color: green;
+}
+a[href$=".pdf"] {
+  color: red;
+}
+a[href*="example"] {
+  text-decoration: underline;
+}
+
+/* Combinators */
+nav > ul {
+  list-style: none;
+}
+h1 + p {
+  margin-top: 0;
+}
+h2 ~ p {
+  color: #666;
+}
+.parent .child {
+  padding: 10px;
+}
+
+/* Pseudo-classes */
+a:hover,
+a:focus,
+a:active {
+  color: var(--primary);
+}
+input:checked + label {
+  font-weight: bold;
+}
+li:nth-child(2n + 1) {
+  background: #f5f5f5;
+}
+button:not(:disabled) {
+  cursor: pointer;
+}
+:is(h1, h2, h3) {
+  font-family: serif;
+}
+:where(article, section) p {
+  line-height: 1.6;
+}
+:has(img) {
+  padding: 0;
+}
+
+/* Pseudo-elements */
+p::first-line {
+  font-variant: small-caps;
+}
+.quote::before {
+  content: "“";
+}
+.quote::after {
+  content: "”";
+}
+::selection {
+  background: yellow;
+}
+::placeholder {
+  color: #999;
+}
+
+/* === Properties & values === */
+.everything {
+  /* Colors */
+  color: red;
+  background-color: #ff00ff;
+  border-color: rgb(255, 0, 255);
+  outline-color: rgba(255, 0, 255, 0.5);
+  fill: hsl(300, 100%, 50%);
+  stroke: hsla(300, 100%, 50%, 0.8);
+
+  /* Lengths & units */
+  width: 100px;
+  height: 50%;
+  margin: 1rem 2em 3vh 4vw;
+  padding: 10pt;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 0.05ch;
+
+  /* Numbers */
+  opacity: 0.5;
+  z-index: 999;
+  flex-grow: 1;
+
+  /* Keywords */
+  display: flex;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  visibility: hidden;
+  overflow: auto;
+
+  /* Strings */
+  content: "hello";
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  /* Functions */
+  background: linear-gradient(45deg, red, blue);
+  transform: translateX(10px) rotate(45deg) scale(1.5);
+  width: calc(100% - 20px);
+  width: clamp(200px, 50%, 600px);
+  width: min(100%, 800px);
+  filter: blur(4px) brightness(1.2);
+  transition: all 0.3s ease-in-out;
+  box-shadow: var(--shadow);
+
+  /* URLs */
+  background-image: url("./bg.png");
+
+  /* Animation */
+  animation: fadeIn 0.5s ease-in 0s 1 normal forwards;
+
+  /* Important */
+  color: red !important;
+}
+
+/* === Grid & flex === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  grid-area: main;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
