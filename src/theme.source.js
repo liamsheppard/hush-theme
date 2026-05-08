@@ -17,6 +17,7 @@ const lightTheme = {
   neutralForeground2: n[46],
   neutralForeground3: n[74],
   disabledForeground: n[56],
+  neutralBorder: n[80],
 
   // Neutral backgrounds
   neutralBackground1: n[100],
@@ -64,7 +65,7 @@ const lightTheme = {
   primaryForeground3: mutedPrimary[110],
   primaryStroke2: primary[120],
 
-  mutedPrimaryBackground2: mutedPrimary[150],
+  mutedPrimaryBackground2: `${mutedPrimary[140]}DD`,
   mutedPrimaryBackground3: `${mutedPrimary[140]}AA`,
   mutedPrimaryForeground2: mutedPrimary[90],
   mutedPrimaryForeground2Hover: mutedPrimary[50],
@@ -161,18 +162,19 @@ const lightTheme = {
 // to customise the dark variant.
 const darkTheme = {
   // Neutral foregrounds
-  neutralForeground1: n[92],
+  neutralForeground1: n[94],
   neutralForeground2: n[82],
   neutralForeground3: n[40],
   disabledForeground: n[48],
+  neutralBorder: n[24],
 
   // Neutral backgrounds
-  neutralBackground1: n[12],
+  neutralBackground1: n[10],
   neutralBackground1Subtle: n[12],
-  neutralBackground2: n[8],
+  neutralBackground2: n[4],
   neutralBackground2Subtle: n[6],
-  neutralBackground3: n[0],
-  neutralBackground3Hover: n[4],
+  neutralBackground3: n[20],
+  neutralBackground3Hover: n[24],
 
   // Transparent
   transparent: "#00000000",
@@ -212,7 +214,7 @@ const darkTheme = {
   primaryForeground3: mutedPrimary[80],
   primaryStroke2: primary[40],
 
-  mutedPrimaryBackground2: mutedPrimary[40],
+  mutedPrimaryBackground2: `${mutedPrimary[40]}DD`,
   mutedPrimaryBackground3: `${mutedPrimary[40]}AA`,
   mutedPrimaryForeground2: mutedPrimary[150],
   mutedPrimaryForeground2Hover: n[100],
@@ -344,8 +346,8 @@ const buildTheme = (name, colors) => ({
     "editorGroup.dropBackground": colors.pAlpha33,
     "editorGroupHeader.tabsBackground": colors.neutralBackground3,
     "editorGroupHeader.noTabsBackground": colors.neutralBackground3,
-    "tab.unfocusedActiveBackground": colors.neutralBackground3,
-    "editorGroupHeader.border": colors.neutralBackground3,
+    "tab.unfocusedActiveBackground": colors.neutralBackground1,
+    "editorGroupHeader.border": colors.bAlpha11,
     "editorGroup.dropIntoPromptBackground": colors.neutralBackground1,
     "tab.dragAndDropBorder": colors.primaryActiveBorder,
 
@@ -357,7 +359,7 @@ const buildTheme = (name, colors) => ({
     // Status bar
     "statusBar.background": colors.neutralBackground1,
     "statusBar.foreground": colors.neutralForeground2,
-    "statusBar.border": colors.neutralBackground3,
+    "statusBar.border": colors.bAlpha22,
     "statusBar.debuggingBackground": colors.errorBackground2,
     "statusBar.debuggingForeground": colors.onErrorBackground2,
     "statusBar.noFolderBackground": colors.mutedPrimaryBackground2,
@@ -382,7 +384,7 @@ const buildTheme = (name, colors) => ({
     "inputOption.hoverBackground": colors.gAlpha11,
     "inputValidation.infoBackground": colors.neutralBackground1,
     "inputValidation.infoForeground": colors.neutralForeground1,
-    "inputValidation.infoBorder": colors.neutralBackground3Hover,
+    "inputValidation.infoBorder": colors.neutralBorder,
     "inputValidation.errorBackground": colors.neutralBackground2,
     "inputValidation.errorForeground": colors.errorForeground2,
     "inputValidation.errorBorder": colors.errorBorder,
@@ -443,14 +445,14 @@ const buildTheme = (name, colors) => ({
     "list.focusHighlightForeground": colors.orangeForeground,
 
     // Markdown colors
-    "textSeparator.foreground": colors.neutralBackground3,
+    "textSeparator.foreground": colors.gAlpha44,
     "textLink.foreground": colors.primaryForeground1,
     "textLink.activeForeground": colors.primaryForeground2,
     "textBlockQuote.background": colors.neutralBackground1Subtle,
     "textBlockQuote.border": colors.primaryStroke2,
-    "textCodeBlock.background": colors.neutralBackground3,
+    "textCodeBlock.background": colors.gAlpha33,
     "textPreformat.foreground": colors.neutralForeground1,
-    "textPreformat.background": colors.neutralBackground3,
+    "textPreformat.background": colors.gAlpha33,
 
     // Tree view
     "list.activeSelectionForeground": colors.primaryForeground2,
@@ -542,7 +544,7 @@ const buildTheme = (name, colors) => ({
     "diffEditor.removedLineBackground": colors.removedLineBackground,
     "diffEditorGutter.insertedLineBackground": colors.insertedLineBackground,
     "diffEditorGutter.removedLineBackground": colors.removedLineBackground,
-    "diffEditor.diagonalFill": colors.neutralBackground3,
+    "diffEditor.diagonalFill": colors.gAlpha22,
     "diffEditorOverview.insertedForeground": colors.primaryBackground2,
     "diffEditorOverview.removedForeground": colors.errorBackground1,
 
