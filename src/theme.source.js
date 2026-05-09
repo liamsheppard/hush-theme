@@ -156,6 +156,8 @@ const lightTheme = {
   type: purple[80],
   func: orange[100],
   class: orange[100],
+  preFg: purple[60],
+  preBg: `${purple[90]}22`,
 };
 
 // Dark theme token map. Starts as a clone of lightTheme — override fields below
@@ -305,6 +307,8 @@ const darkTheme = {
   type: purple[100],
   func: orange[120],
   class: orange[120],
+  preFg: purple[110],
+  preBg: `${purple[100]}22`,
 };
 
 const buildTheme = (name, colors) => ({
@@ -451,8 +455,8 @@ const buildTheme = (name, colors) => ({
     "textBlockQuote.background": colors.neutralBackground1Subtle,
     "textBlockQuote.border": colors.primaryStroke2,
     "textCodeBlock.background": colors.gAlpha33,
-    "textPreformat.foreground": colors.neutralForeground1,
-    "textPreformat.background": colors.gAlpha33,
+    "textPreformat.foreground": colors.preFg,
+    "textPreformat.background": colors.preBg,
 
     // Tree view
     "list.activeSelectionForeground": colors.primaryForeground2,
