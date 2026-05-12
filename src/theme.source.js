@@ -85,8 +85,8 @@ const lightTheme = {
   mergeCurrent: primary[140],
   mergeIncoming: purple[130],
   mergeCommon: blue[130],
-  insertedTextBackground: primary[150],
-  insertedLineBackground: primary[160],
+  insertedTextBackground: mutedPrimary[150],
+  insertedLineBackground: mutedPrimary[160],
   removedTextBackground: red[130],
   removedLineBackground: red[150],
 
@@ -236,8 +236,8 @@ const darkTheme = {
   mergeCurrent: primary[60],
   mergeIncoming: purple[40],
   mergeCommon: blue[50],
-  insertedTextBackground: primary[40],
-  insertedLineBackground: primary[20],
+  insertedTextBackground: mutedPrimary[40],
+  insertedLineBackground: mutedPrimary[20],
   removedTextBackground: red[40],
   removedLineBackground: red[20],
 
