@@ -147,7 +147,7 @@
     "editorCodeLens.foreground": "#BCBCC9",
     "gitlens.trailingLineForegroundColor": "#BCBCC9",
     "editorLink.activeForeground": "#029388",
-    "editor.selectionBackground": "#4baba044",
+    "editor.selectionBackground": "#19776e33",
     "editor.findMatchBackground": "#F26A0055",
     "editor.findMatchHighlightBackground": "#F26A0033",
     "search.resultsInfoForeground": "#373743",

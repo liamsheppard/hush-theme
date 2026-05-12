@@ -52,6 +52,8 @@ const lightTheme = {
   mpAlpha88: `${mutedPrimary[100]}88`,
   mpAlphaAA: `${mutedPrimary[100]}AA`,
 
+  selectionBackground: `${primary[80]}33`,
+
   // Primary brand
   mutedPrimaryBorder: mutedPrimary[120],
   primaryActiveBorder: "#01AFA1", // Primary 100, max chroma
@@ -202,6 +204,8 @@ const darkTheme = {
   mpAlpha55: `${mutedPrimary[100]}55`,
   mpAlpha88: `${mutedPrimary[100]}88`,
   mpAlphaAA: `${mutedPrimary[100]}AA`,
+
+  selectionBackground: `${primary[120]}33`,
 
   // Primary brand
   mutedPrimaryBorder: mutedPrimary[70],
@@ -498,7 +502,7 @@ const buildTheme = (name, colors) => ({
     "editorCodeLens.foreground": colors.subtleComment,
     "gitlens.trailingLineForegroundColor": colors.subtleComment,
     "editorLink.activeForeground": colors.editorLink,
-    "editor.selectionBackground": colors.pAlpha44,
+    "editor.selectionBackground": colors.selectionBackground,
     "editor.findMatchBackground": colors.findSelectedMatchBackground, // Focused match background
     "editor.findMatchHighlightBackground": colors.findMatchBackground, // All matches background
     "search.resultsInfoForeground": colors.neutralForeground1,
